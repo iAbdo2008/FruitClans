@@ -1,5 +1,8 @@
 # FruitClans
 
+[![](https://poggit.pmmp.io/shield.state/FruitClans)](https://poggit.pmmp.io/p/FruitClans)
+<a href="https://poggit.pmmp.io/p/FruitClans"><img src="https://poggit.pmmp.io/shield.state/FruitClans"></a>
+
 ```This Plugin Is Maintained By UtriX Network , All Copyrights are reserved.```
 
 The First &amp; Best Clans Plugin For Pocketmine-MP 5 !
