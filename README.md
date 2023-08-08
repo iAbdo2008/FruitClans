@@ -26,5 +26,5 @@ $fruit_clans = FruitClans::getInstance();
 - ```acceptInvite(CommandSender $sender, String $clan_name)``` - **For Accepting Invite**
 - ```declineInvite(CommandSender $sender, String $clan_name)``` - **For Declining a Clan Invite**
 - ```quitFromClan(CommandSender $sender)``` - **For Quiting a Clan**
-- ```kickFromClan(CommandSender $sender, String $player_name)``` - **For Kicking Some One From The Clan**
+- ```kickFromClan(CommandSender $sender, String $player_name)``` - **For Kicking Some One From The Clan..**
 
