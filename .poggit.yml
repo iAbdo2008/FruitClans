@@ -5,4 +5,5 @@ branches:
 projects:
   FruitClans:
     path: ""
+    icon: icon.png
 ...
