@@ -1,6 +1,6 @@
 # FruitClans
 
-                                    **This Plugin Is Maintained By UtriX Network , All Copyrights are reserved**
+```**This Plugin Is Maintained By UtriX Network , All Copyrights are reserved**```
 
 The First &amp; Best Clans Plugin For Pocketmine-MP 5 !
 
