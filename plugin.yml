@@ -1,0 +1,20 @@
+name: FruitClans
+main: FruitClans\FruitClans
+api: 5.0.0
+version: 1.0.0
+author: oPinqzz
+
+
+commands:
+  clan:
+   description: FruitClans Command
+   permission: fruitclans.player
+
+
+
+
+permissions:
+  fruitclans.player:
+    description: FruitClans Normal Privileges
+    default: true
+    
