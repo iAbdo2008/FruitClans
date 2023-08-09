@@ -30,9 +30,9 @@ class FruitClans extends PluginBase implements Listener{
         $this->getCommand("clan")->setExecutor(new FruitCommands, $this);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->clanowners = new Config($this->getDataFolder() . "FruitClans/clanowners.yml", 2);
-		$this->clantags = new Config($this->getDataFolder() . "FruitClans/clantags.yml", 2);
-		$this->clanrequests = new Config($this->getDataFolder() . "FruitClans/clanrequests.yml", 2);
-		$this->clanmembers = new Config($this->getDataFolder() . "FruitClans/clanmembers.yml", 2);
+	$this->clantags = new Config($this->getDataFolder() . "FruitClans/clantags.yml", 2);
+	$this->clanrequests = new Config($this->getDataFolder() . "FruitClans/clanrequests.yml", 2);
+	$this->clanmembers = new Config($this->getDataFolder() . "FruitClans/clanmembers.yml", 2);
 
         self::$instance = $this;
     }
