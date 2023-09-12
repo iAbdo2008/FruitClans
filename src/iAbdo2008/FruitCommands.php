@@ -1,6 +1,6 @@
 <?php
 
-namespace FruitClans;
+namespace iAbdo2008;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\CommandExecutor;
