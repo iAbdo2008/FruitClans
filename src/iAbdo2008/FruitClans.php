@@ -24,7 +24,7 @@ class FruitClans extends PluginBase implements Listener{
 
         @mkdir($this->getDataFolder() . "FruitClans/");
         @mkdir($this->getDataFolder() . "FruitClansPlayers/");
-        $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &aEnabled &7|"));
+        // $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &aEnabled &7|"));
         //$this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &6Developed By oPinqzz, For &cPaid Commissions , \n&6Go to My Discord&7: &3op_n#0 &7|"));
 
         $this->getCommand("clan")->setExecutor(new FruitCommands, $this);
@@ -38,7 +38,7 @@ class FruitClans extends PluginBase implements Listener{
     }
 
     public function onDisable() : void {
-        $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &cDisabled &7|"));
+        // $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &cDisabled &7|"));
         //$this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &6Developed By oPinqzz, For &cPaid Commissions , \n&6Go to My Discord&7: &3op_n#0 &7|"));
     }
 
