@@ -19,6 +19,7 @@ class FruitClans extends PluginBase implements Listener{
     private $clanrequests;
     private $clanmembers;
     private $player_data;
+    private $plugin_config;
 
     public function onEnable() : void {
 
@@ -30,7 +31,9 @@ class FruitClans extends PluginBase implements Listener{
 	$this->clantags = new Config($this->getDataFolder() . "FruitClans/clantags.yml", 2);
 	$this->clanrequests = new Config($this->getDataFolder() . "FruitClans/clanrequests.yml", 2);
 	$this->clanmembers = new Config($this->getDataFolder() . "FruitClans/clanmembers.yml", 2);
-
+	$this->plugin_config = new Config($this->getDataFolder() . "config.yml", 2, array(
+		"clans_plugin_perfix" => "&7| &6Fruit§3Clans"
+	));
         self::$instance = $this;
     }
 
@@ -65,6 +68,14 @@ class FruitClans extends PluginBase implements Listener{
         }
     }
 
+    public function getPluginConfig() {
+    	$this->plugin_config = new Config($this->getDataFolder() . "config.yml", 2, array(
+		"clans_plugin_perfix" => "&7| &6Fruit§3Clans"
+	));
+
+	return $this->plugin_config;
+    }
+
 
     public function ReplaceColors(String $s) {
         $new_s = str_replace("&", "§", $s);
@@ -73,6 +84,7 @@ class FruitClans extends PluginBase implements Listener{
 
 
     public function sendHelpMenu(CommandSender $sender) {
+	$prefix = $this->getPluginConfig()->get("clans_plugin_perfix");
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &6Fruit§3Clans  &7- &aHelp Menu"));
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &3For Creating a Clan, Type &7: &6/clan create {clan_name} {clan_prefix}"));
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &3For Deleting a Clan, Type &7: &6/clan delete {clan_name}"));
