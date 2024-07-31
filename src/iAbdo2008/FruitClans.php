@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
-
+ 
 
 class FruitClans extends PluginBase implements Listener{
 
