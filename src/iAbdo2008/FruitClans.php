@@ -98,7 +98,7 @@ class FruitClans extends PluginBase implements Listener{
     }
 
     public function getClanName(Player $player) : String {
-    	$data - $this->getData($player->getName(), null);
+    	$data = $this->getData($player->getName(), null);
 	return $data->get("Clan");
     }
 
