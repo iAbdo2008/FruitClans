@@ -24,9 +24,6 @@ class FruitClans extends PluginBase implements Listener{
 
         @mkdir($this->getDataFolder() . "FruitClans/");
         @mkdir($this->getDataFolder() . "FruitClansPlayers/");
-        // $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &aEnabled &7|"));
-        //$this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &6Developed By oPinqzz, For &cPaid Commissions , \n&6Go to My Discord&7: &3op_n#0 &7|"));
-
         $this->getCommand("clan")->setExecutor(new FruitCommands, $this);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->clanowners = new Config($this->getDataFolder() . "FruitClans/clanowners.yml", 2);
@@ -38,8 +35,7 @@ class FruitClans extends PluginBase implements Listener{
     }
 
     public function onDisable() : void {
-        // $this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &cDisabled &7|"));
-        //$this->getLogger()->info($this->ReplaceColors("&7| &6Fruit§3Clans &7- &6Developed By oPinqzz, For &cPaid Commissions , \n&6Go to My Discord&7: &3op_n#0 &7|"));
+    	// TODO : Nothing
     }
 
     public static function getInstance() : self {
@@ -87,6 +83,11 @@ class FruitClans extends PluginBase implements Listener{
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &3For Editing The Clan Tag/Prefix, Type &7: &6/clan edittag {clan_name} {clan_new_prefix}"));
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &3For Quitting a Clan, Type &7: &6/clan quit {clan_name}"));
         $sender->sendMessage($this->ReplaceColors("&7| &6Fruit§3Clans  &7» &3For Kicking Someone From The Clan, Type &7: &6/clan kick {player_name}"));
+    }
+
+    public function getClanName(Player $player) : String {
+    	$data - $this->getData($player->getName(), null);
+	return $data->get("Clan");
     }
 
     public function createClan(CommandSender $sender, String $c_name, String $c_prefix) {
